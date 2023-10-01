@@ -22,7 +22,7 @@ fs.readFile('./data/Melbourne_Temperature.csv', 'utf8', (err, content) => {
   // Parse the CSV content and convert it into JSON
   csvParser({ mapHeaders: ({ header }) => header.trim() })
     .on('data', (row) => {
-      console.log(row['Date'])
+      // console.log(row['Date'])
       data.push(row);
     })
     .on('end', () => {
